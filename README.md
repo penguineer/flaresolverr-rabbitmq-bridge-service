@@ -14,6 +14,19 @@ Configuration is done using environment variables:
 * `RMQ_PASSWORD`: Password for RabbitMQ (default `guest`)
 * `RMQ_VHOST`: Virtual host for RabbitMQ (default `/`)
 
+## Run with Docker
+
+With the configuration stored in a file `.env`, the service can be run as follows:
+
+```bash
+docker run --rm \
+           -p 8080:8080 \
+           --env-file .env \
+           mrtux/flaresolverr-rmq-bridge-service:latest
+```
+
+Please make sure to pin the container to a specific version in a production environment.
+
 ## Development
 
 Version numbers are determined with [jgitver](https://jgitver.github.io/).
