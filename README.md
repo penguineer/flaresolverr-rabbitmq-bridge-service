@@ -13,6 +13,7 @@ Configuration is done using environment variables:
 * `RMQ_USER`: Username for RabbitMQ (default `guest`)
 * `RMQ_PASSWORD`: Password for RabbitMQ (default `guest`)
 * `RMQ_VHOST`: Virtual host for RabbitMQ (default `/`)
+* `RMQ_QUEUE_FLARESOLVERR_REQUESTS`: Name of the queue for FlareSolverr requests (default `flaresolverr-requests`)
 
 ## Run with Docker
 
