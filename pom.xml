@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.penguineering.flaresolverr-rmq-bridge</groupId>
 	<artifactId>flaresolverr-rmq-bridge-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0</version> <!-- Populated by jgitver -->
 	<name>flaresolverr-rmq-bridge-service</name>
 	<description>Post requests to FlareSolverr via RabbitMQ</description>
 	<url/>

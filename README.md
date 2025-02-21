@@ -1,7 +1,12 @@
 # FlareSolverr RabbitMQ Bridge (service)
 
-> A simple microservice that allows to post requests to 
+> A simple microservice that allows to post requests to
 > [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) via [RabbitMQ](https://www.rabbitmq.com/).
+
+## Development
+
+Version numbers are determined with [jgitver](https://jgitver.github.io/).
+If you encounter a project version `0` there is an issue with the jgitver generator.
 
 ## Maintainers
 
