@@ -25,4 +25,6 @@ spring:
 
 flaresolverr-rmq-bridge:
   service:
+    flaresolverr:
+      url: ${FLARESOLVERR_URL:http://localhost:8191}
     queue-flaresolverr-requests: ${RMQ_QUEUE_FLARESOLVERR_REQUESTS:flaresolverr-requests}

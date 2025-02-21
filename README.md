@@ -14,6 +14,7 @@ Configuration is done using environment variables:
 * `RMQ_PASSWORD`: Password for RabbitMQ (default `guest`)
 * `RMQ_VHOST`: Virtual host for RabbitMQ (default `/`)
 * `RMQ_QUEUE_FLARESOLVERR_REQUESTS`: Name of the queue for FlareSolverr requests (default `flaresolverr-requests`)
+* `FLARESOLVERR_URL`: URL for the FlareSolverr service (default `http://localhost:8191`)
 
 ## Run with Docker
 
