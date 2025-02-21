@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health"
+    access:
+      default: read_only
+  endpoint:
+    health:
+      access: read_only
+
+spring:
+  application:
+    name: flaresolverr-rmq-bridge-service
+
+  rabbitmq:
+    host: ${RMQ_HOST:localhost}
+    port: ${RMQ_PORT:5672}
+    username: ${RMQ_USER:guest}
+    password: ${RMQ_PASSWORD:guest}
+    virtual-host: ${RMQ_VHOST:/}
