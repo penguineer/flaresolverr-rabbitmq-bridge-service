@@ -16,6 +16,28 @@ Configuration is done using environment variables:
 * `RMQ_QUEUE_FLARESOLVERR_REQUESTS`: Name of the queue for FlareSolverr requests (default `flaresolverr-requests`)
 * `FLARESOLVERR_URL`: URL for the FlareSolverr service (default `http://localhost:8191`)
 
+## API
+
+The service accepts JSON requests with the following structure:
+
+```json
+{
+  "request": "Expects a request object according to the FlareSolverr API"
+}
+```
+
+The request object is passed to the FlareSolverr service and the response is returned.
+Please refer to
+the [FlareSolverr API documentation](https://github.com/FlareSolverr/FlareSolverr?tab=readme-ov-file#-requestget) for
+details.
+
+When the `postData` property is set, a POST request is sent to the FlareSolverr service, otherwise a GET request is
+performed.
+
+Note: Encapsulating the request in an object is necessary to allow for additional properties in the future.
+
+The response is returned as is, without any processing.
+
 ## Run with Docker
 
 With the configuration stored in a file `.env`, the service can be run as follows:
