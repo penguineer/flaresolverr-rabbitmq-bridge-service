@@ -1,4 +1,4 @@
-package com.penguineering.flaresolverr_rmq_bridge.service.flaresolverr;
+package com.penguineering.flaresolverr_rmq_bridge.service;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
@@ -8,12 +8,12 @@ import java.io.IOException;
 import java.time.Duration;
 
 /**
- * A custom serializer for converting {@link Duration} objects to their millisecond representation.
+ * A custom serializer for converting {@link Duration} objects to their minute representation.
  * If the {@link Duration} is null, it writes a JSON null value.
  */
-public class DurationToMillisSerializer extends StdSerializer<Duration> {
+public class DurationToMinutesSerializer extends StdSerializer<Duration> {
 
-    public DurationToMillisSerializer() {
+    public DurationToMinutesSerializer() {
         super(Duration.class);
     }
 
@@ -22,7 +22,7 @@ public class DurationToMillisSerializer extends StdSerializer<Duration> {
         if (value == null) {
             gen.writeNull();
         } else {
-            gen.writeNumber(value.toMillis());
+            gen.writeNumber(value.toMinutes());
         }
     }
 }

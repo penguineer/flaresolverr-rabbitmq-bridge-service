@@ -1,4 +1,4 @@
-package com.penguineering.flaresolverr_rmq_bridge.service.flaresolverr;
+package com.penguineering.flaresolverr_rmq_bridge.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -9,7 +9,7 @@ import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DurationToMillisSerializerTest {
+public class DurationToMinutesSerializerTest {
 
     private ObjectMapper mapper;
 
@@ -17,16 +17,16 @@ public class DurationToMillisSerializerTest {
     public void setUp() {
         mapper = new ObjectMapper();
         SimpleModule module = new SimpleModule();
-        module.addSerializer(Duration.class, new DurationToMillisSerializer());
+        module.addSerializer(Duration.class, new DurationToMinutesSerializer());
         mapper.registerModule(module);
     }
 
     @Test
-    public void testSerializeDurationToMillis() throws Exception {
-        Duration duration = Duration.ofMillis(5000);
+    public void testSerializeDurationToMinutes() throws Exception {
+        Duration duration = Duration.ofMinutes(5);
         String result = mapper.writeValueAsString(duration);
 
-        assertEquals("5000", result);
+        assertEquals("5", result);
     }
 
     @Test
@@ -50,14 +50,14 @@ public class DurationToMillisSerializerTest {
         Duration duration = Duration.ofDays(365);
         String result = mapper.writeValueAsString(duration);
 
-        assertEquals("31536000000", result); // 365 days * 24 hours/day * 60 minutes/hour * 60 seconds/minute * 1000 ms/second
+        assertEquals("525600", result); // 365 days * 1440 minutes/day
     }
 
     @Test
     public void testSerializeNegativeDuration() throws Exception {
-        Duration duration = Duration.ofMillis(-5000);
+        Duration duration = Duration.ofMinutes(-5);
         String result = mapper.writeValueAsString(duration);
 
-        assertEquals("-5000", result);
+        assertEquals("-5", result);
     }
 }

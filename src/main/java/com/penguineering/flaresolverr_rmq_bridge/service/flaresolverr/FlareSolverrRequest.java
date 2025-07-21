@@ -2,6 +2,8 @@ package com.penguineering.flaresolverr_rmq_bridge.service.flaresolverr;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.penguineering.flaresolverr_rmq_bridge.service.DurationToMillisSerializer;
+import com.penguineering.flaresolverr_rmq_bridge.service.DurationToMinutesSerializer;
 
 import java.time.Duration;
 import java.util.List;
