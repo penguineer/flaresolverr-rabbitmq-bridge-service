@@ -7,6 +7,10 @@ import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import java.io.IOException;
 import java.time.Duration;
 
+/**
+ * A custom serializer for converting {@link Duration} objects to their millisecond representation.
+ * If the {@link Duration} is null, it writes a JSON null value.
+ */
 public class DurationToMillisSerializer extends StdSerializer<Duration> {
 
     public DurationToMillisSerializer() {
