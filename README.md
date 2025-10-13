@@ -51,6 +51,8 @@ docker run --rm \
 
 Please make sure to pin the container to a specific version in a production environment.
 
+The GitHub project stores [artifact attestations for the Docker image](https://github.com/netz39/ansible-role-host-docker/attestations).
+
 ## Development
 
 Version numbers are determined with [jgitver](https://jgitver.github.io/).
